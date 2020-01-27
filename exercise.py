@@ -10,4 +10,20 @@ with open("binary2", 'bw') as bin_file2:
     bin_file2.write(x.to_bytes(4, 'big'))
     bin_file2.write(x.to_bytes(4, 'little'))
 
+with open("binary2", 'br') as bin_file2:
+    e = int.from_bytes(bin_file2.read(2), 'big')
+    print(e)
+    f = int.from_bytes(bin_file2.read(2), 'big')
+    print(f)
+
+    g = int.from_bytes(bin_file2.read(4), 'big')
+    print(g)
+
+    h = int.from_bytes(bin_file2.read(4), 'big')
+    print(h)
+
+    i = int.from_bytes(bin_file2.read(4), 'big')
+    print(i)
+
+
 
